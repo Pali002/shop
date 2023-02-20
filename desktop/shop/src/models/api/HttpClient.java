@@ -72,12 +72,12 @@ public class HttpClient {
     public String delete(String urlStr, HashMap<String, String> headers) throws IOException {
         String text;
         try {
-            tryDelete(urlStr, headers);
+            text = tryDelete(urlStr, headers);
         } catch (IOException e) {
             text = "Hiba! Delete muvelet nem sikerult.";
-            System.out.println();
+            System.out.println(text);
         }
-        return "";
+        return text;
     }
 
     public String tryDelete(String urlStr, HashMap<String, String> headers) throws IOException {
