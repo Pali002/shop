@@ -8,9 +8,10 @@ import com.google.gson.GsonBuilder;
 import models.Pro;
 import models.Product;
 
-public class Restapi {
+public class Productapi {
 
-    public Restapi() {
+    public Productapi() {
+        
     }
 
     public String getProductsAsString() {
