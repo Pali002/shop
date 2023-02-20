@@ -7,9 +7,10 @@ import java.net.URL;
 public class CheckApi {
     int responseCode;
 
-    public void checkUrl(String urlStr) throws IOException {
+    public boolean checkUrl(String urlStr) throws IOException {
         try {
             tryCheckUrl(urlStr);
+            return true;
         } catch (IOException e) {
             System.err.println("Hiba! Nem érhető el!");
             return false;
