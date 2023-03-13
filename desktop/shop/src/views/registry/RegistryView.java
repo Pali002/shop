@@ -1,5 +1,6 @@
 package views.registry;
 
+import javafx.geometry.Pos;
 import javafx.scene.layout.HBox;
 import views.InputPanel;
 import views.PassPanel;
@@ -9,11 +10,13 @@ public class RegistryView extends HBox {
     InputPanel emailInput;
     PassPanel passInput;
     PassPanel passAgainInput;
+    InputPanel titlePanel;
 
     public RegistryView() {
         this.initComponent();
         this.setComponent();
         this.addComponent();
+        this.setPanel();
     }
     private void initComponent() {
         this.nameInput = new InputPanel();
@@ -30,23 +33,14 @@ public class RegistryView extends HBox {
     }
 
     private void addComponent() {
+        this.getChildren().add(this.titlePanel);
         this.getChildren().add(this.nameInput);
         this.getChildren().add(this.emailInput);
         this.getChildren().add(this.passInput);
         this.getChildren().add(this.passAgainInput);
     }
-    public String getText() {
-        return emailInput.getText();
-    }
-    public void setText(String text) {
-        this.emailInput.setText(text);
-    }
-    public String getValue() {
-        return nameInput.getText();
-    }
-    public void setValue(String value) {
-        this.nameInput.setText(value);
-    }
-    
-    
+
+    private void setPanel() {
+        this.setAlignment(Pos.CENTER);
+    }    
 }
