@@ -1,0 +1,24 @@
+<h2>Termékek</h2>
+
+<div class="products">
+
+    <div class="card float-start m-2" style="width: 18rem;"
+    *ngFor="let product of products">
+        <img src="assets/{{product.imgpath}}" 
+        class="card-img-top m-2" alt="..."
+        style="width: 150px;"
+        >
+        <div class="card-body">
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text">
+            Cikkszám: {{product.itemnumber}}<br>
+            Darab: {{product.quantity}}<br>
+            Ár: {{product.price}}
+          </p>
+          <button class="btn btn-primary" (click)="addToCart(product.id)">
+            Kosárba
+          </button>
+        </div>
+      </div>
+
+</div>
